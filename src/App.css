@@ -1,20 +1,51 @@
-.App {
-  text-align: center;
+img {
+  margin-top: 30px
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+li {
+  list-style-type: none
+}
+
+input {
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+body {
+  background-color: rgba(74, 74, 204, 0.274)
+}
+
+button {
+  background-color: rgb(65, 40, 133);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.App {
+  text-align: center;
+  margin: 20
+}
+
+.Container {
+  display: block;
+  padding: 20px 0;
+  margin-top: 30px
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #365ca7;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: white;
 }
 
