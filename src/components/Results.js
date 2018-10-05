@@ -3,7 +3,8 @@ import React from 'react';
 const Results = props => (
   <div className='container'>
     <div className='row'>
-      {props.results.map((result) =>{
+      {props.results.sort((a,b) => b.stargazers_count - a.stargazers_count)
+      .map((result) =>{
         return (
           <div key={result.id} className="resultsBox">
                 <ul className="listItems">

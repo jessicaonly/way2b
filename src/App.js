@@ -17,7 +17,9 @@ class App extends Component {
     if (apiCall.status === 200) {
       const returnData= await apiCall.json();
         this.setState({results: returnData});
-        this.setState({userPic: this.state.results[0].owner.avatar_url});
+        if (this.state.results[0]) {
+          this.setState({userPic: this.state.results[0].owner.avatar_url});
+        }
     }
     else {
       console.log('There was an error!')
