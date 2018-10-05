@@ -9,7 +9,9 @@ const Results = props => (
             <div className="resultsBox">
               <div className="reposList">
                 <ul className="listItems">
-                <li className="listItem">{result.name}</li>
+                <li className="listItem">{result.login}</li>
+                <img src={result.avatar_url}
+                  alt={result.id}/>
                 </ul>
                </div> 
             </div>
