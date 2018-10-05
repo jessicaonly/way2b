@@ -6,7 +6,8 @@ import Results from './components/Results';
 
 class App extends Component {
   state = {
-    results: []
+    results: [],
+    userPic: ''
   }
 
   getResults = async(e) => {
@@ -16,7 +17,9 @@ class App extends Component {
 
     const returnData= await apiCall.json();
     this.setState({results: returnData})
-    console.log(this.state.results);
+    this.setState({userPic: returnData[0].owner.avatar_url});
+    console.log(returnData[0].owner.avatar_url);
+    //console.log(this.state.userpic)
   }
 
 
@@ -27,6 +30,8 @@ class App extends Component {
           <h1 className="Title">Github Search</h1>
         </header>
         <Form getResults={this.getResults} />
+         <img src={this.state.userPic}
+          alt={this.state.results.id}/>
         <Results results={this.state.results} />
       </div>
     );
