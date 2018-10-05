@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="Title">Github Search</h1>
+          <h1 className="Title"> 👩🏻‍💻✨👨‍💻✨👨🏻‍💻 Github Search 👩🏿‍💻✨👩🏼‍💻✨👨🏾‍💻 </h1>
         </header>
         <div className="Container">
           <Form getResults={this.getResults} />

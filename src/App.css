@@ -74,7 +74,7 @@ button {
   align-items: center;
   justify-content: center;
   font-size: calc(8px + 2vmin);
-  color: white;
+  color: lightskyblue;
 }
 
 .App-link {
