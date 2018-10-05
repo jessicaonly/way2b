@@ -13,18 +13,16 @@ class App extends Component {
   getResults = async(e) => {
     const resultsName = e.target.elements.searchQuery.value;
     e.preventDefault();
-    try {
     const apiCall = await fetch(`https://cors-anywhere.herokuapp.com/https://api.github.com/users/${resultsName}/repos`)
-    const returnData= await apiCall.json();
-    console.log(returnData)
-    this.setState({results: returnData})
-    console.log(this.state.results)
-    this.setState({userPic: this.state.results[0].owner.avatar_url})
-    console.log(this.state.results[0].owner.avatar_url)
+    if (apiCall.status === 200) {
+      const returnData= await apiCall.json();
+        this.setState({results: returnData})
+        this.setState({userPic: this.state.results[0].owner.avatar_url})
     }
-    catch(e){
+    else {
       console.log('There was an error!')
-      this.setState({userPic: `https://img.itch.zone/aW1hZ2UvMTUzMzQwLzcwMjU1OC5wbmc=/original/FkET0M.png`})
+      this.setState({userPic: `https://img.itch.zone/aW1hZ2UvMTUzMzQwLzcwMjU1OC5wbmc=/original/FkET0M.png`});
+      this.setState({results: []});
     }
   }
 
@@ -37,7 +35,7 @@ class App extends Component {
         </header>
         <div className="Container">
           <Form getResults={this.getResults} />
-          <img src={this.state.userPic}
+          <img className="userPic" src={this.state.userPic}
                alt={this.state.userPic}/>
           <div className="ResultsContainer">
           <Results results={this.state.results} />

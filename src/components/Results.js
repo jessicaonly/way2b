@@ -7,7 +7,7 @@ const Results = props => (
         return (
           <div key={result.id} className="resultsBox">
                 <ul className="listItems">
-                  <li className="listItem"><a href={result.clone_url}>{result.name}</a></li>
+                  <li className="listItem"><a href={result.clone_url}>{result.name}</a> <img src="http://www.iralovestolaugh.com/wp-content/uploads/2015/08/Purple-Star-Icon-300x275.png" alt="star"/> : {result.stargazers_count} </li>
                 </ul>
           </div>
           );

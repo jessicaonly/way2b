@@ -1,15 +1,18 @@
-img {
-  margin-top: 30px
-}
 
 ul li {
   list-style-type: none;
   background: rgba(74, 74, 204, 0.274);
   margin: 5px;
+  top: 50%;
 }
 
 ul li a:hover, ul li a:focus {
   color: violet;
+ }
+
+ ul li img {
+  height: 25px;
+  justify-content: right;
  }
 
 ul {
@@ -17,7 +20,6 @@ ul {
   padding: 5px;
   width: 50%;
   margin-left: 25%;
-  align-content: center
 }
 
 input {
@@ -40,8 +42,8 @@ a:visited {
   color: grey
 }
 
-a:hover {
-  color: lavenderblush
+body {
+  color: lightgray
 }
 
 button {
@@ -77,6 +79,10 @@ button {
 
 .App-link {
   color: #61dafb;
+}
+
+.userPic {
+  margin-top: 30px
 }
 
 @keyframes App-logo-spin {
