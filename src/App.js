@@ -36,12 +36,12 @@ class App extends Component {
           <h1 className="Title">Github Search</h1>
         </header>
         <div className="Container">
-        <Form getResults={this.getResults} />
-        <img src={this.state.userPic}
-                  alt={this.state.userPic}/>
-        <div className="ResultsContainer">
-        <Results results={this.state.results} />
-        </div>
+          <Form getResults={this.getResults} />
+          <img src={this.state.userPic}
+               alt={this.state.userPic}/>
+          <div className="ResultsContainer">
+          <Results results={this.state.results} />
+          </div>
         </div>
       </div>
     );

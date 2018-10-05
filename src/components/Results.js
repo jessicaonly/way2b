@@ -5,19 +5,15 @@ const Results = props => (
     <div className='row'>
       {props.results.map((result) =>{
         return (
-          <div key={result.id}>
-            <div className="resultsBox">
-              <div className="reposList">
+          <div key={result.id} className="resultsBox">
                 <ul className="listItems">
-                <li className="listItem">{result.name}</li>
+                  <li className="listItem"><a href={result.clone_url}>{result.name}</a></li>
                 </ul>
-               </div> 
-            </div>
           </div>
           );
         })} 
       </div>
-      </div>
+   </div>
 )
 
 export default Results;
